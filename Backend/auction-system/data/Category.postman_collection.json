@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "03a5fc5b-7620-4a64-b948-9540270cde9c",
+		"name": "Category",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "category list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

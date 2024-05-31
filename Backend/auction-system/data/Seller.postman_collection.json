@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "68a98cb8-39da-44b6-9959-bf8e98b6b0f3",
+		"name": "Seller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHNhbmppdjc3MUBnbWFpbC5jb20iLCJpc3MiOiJNSVUiLCJpYXQiOjE2OTc5MjExMDUsImV4cCI6MTY5NzkyNDcwNX0.z-4DT15yslXcLoBQCWeSh-xLmJa1dioHJnmjwjwbHDZdjzBquBavPVPvE4UEnN3zxYSQSzVQgVllJfWS3uY7Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Book5\",\n    \"description\":\"test2222\",    \n    \"bidStartingPrice\":3.5,\n    \"deposit\":10,\n    \"bidDueDate\":\"2023-11-11\",\n    \"biddingPaymentDueDate\":\"2023-11-12\",\n    \"highestBidAmount\":0.0,\n    \"status\": \"SaveWithoutRelease\", \n    \"sellerId\":1, /*seller id*/\n    \"categoryIds\":[1]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 3,\n  \"name\": \"Book5\",\n  \"description\": \"test2277eee722\",\n  \"bidStartingPrice\": 3.5,\n  \"deposit\": 10,\n  \"bidDueDate\": \"2023-11-11\",\n  \"biddingPaymentDueDate\": \"2023-11-12\",\n  \"highestBidAmount\": 0,\n  \"status\": \"SaveWithoutRelease\",\n  \"sellerId\": 1,\n  \"categoryIds\": [\n    1\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status change as release product/delete product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHNhbmppdjc3MUBnbWFpbC5jb20iLCJpc3MiOiJNSVUiLCJpYXQiOjE2OTc5NDQ1ODYsImV4cCI6MTY5Nzk0ODE4Nn0.iWN1Ou8NPCw7QkX0XZH2V1379lO4WEWNRSzyHxQWKdojPsxLhuO5D7Z4U95oJ3SsiH_k_w88_a4A9XTY6vYGVA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\":\"SaveAndRelease\"   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

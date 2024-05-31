@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "7c15bd23-3601-43a1-863b-3bf27d2084aa",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bidding products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHNhbmppdjc3MUBnbWFpbC5jb20iLCJpc3MiOiJNSVUiLCJpYXQiOjE2OTc5NDY2MzcsImV4cCI6MTY5Nzk1MDIzN30.sNPlcGgUzRyHINoMM7O3YAjCPdtClzVe7ncJpyHIeBMNmSbQFyW7n2t82qb56kMlZyJ4G6qfAzCNgA1SaHl6Uw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/bidding?status=SaveAndRelease",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"bidding"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "SaveAndRelease",
+							"description": "release or running"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHNhbmppdjc3MUBnbWFpbC5jb20iLCJpc3MiOiJNSVUiLCJpYXQiOjE2OTc5NTE3ODEsImV4cCI6MTY5Nzk1NTM4MX0.PfizbKYqnDcLoRcrjr7IA4M48I-IxoVDhnjQ6mAS-wIfIJ76rkrngqGFlz9H7TH8RiD1gZsBOe3xwQvfwcuaFg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/search?query=name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user dashboard details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHNhbmppdjc3MUBnbWFpbC5jb20iLCJpc3MiOiJNSVUiLCJpYXQiOjE2OTc5NTE3ODEsImV4cCI6MTY5Nzk1NTM4MX0.PfizbKYqnDcLoRcrjr7IA4M48I-IxoVDhnjQ6mAS-wIfIJ76rkrngqGFlz9H7TH8RiD1gZsBOe3xwQvfwcuaFg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/dashboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
